@@ -3,18 +3,21 @@ import banner from '../../images/banner.jpg'
 
 const Banner = () => {
     return (
-        <div class="card w-96 bg-base-100 shadow-xl image-full">
-            <figure><img src={banner} alt='banner' /></figure>
-            <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
+        <div className="bg-no-repeat bg-center hero "
+            style={{ backgroundImage: `url(${banner})` }} >
+
+            {/* <div className=" bg-black bg-opacity-50 px-80  py-28 "> */}
+            <div className=" hero-content flex-col bg-black bg-opacity-50  sm: lg:pb-48 lg:pt-20 lg:px-80 text-center  ">
+                <h3 className='text-8xl font-semibold text-white mt-20 Plus  '>PC   <span className='text-secondary ml-10'>   World</span></h3>
+                <p className='text-sm text-white uppercase '>Gadgets <span className='mx-8'>Computers</span>Accessories</p>
+                <div className=' mt-8 pt-10  '>
+                    <button class="btn btn-sm btn-outline btn-secondary animate-bounce w-40 h-6">Explore More</button>
+                    <button class="btn btn-sm btn-outline btn-secondary animate-bounce w-40 h-6"> Shop Now </button>
                 </div>
             </div>
-        </div>
+        </div >
 
     );
 };
 
-export default Banner;
+export default Banner
