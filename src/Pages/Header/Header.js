@@ -5,9 +5,9 @@ const Header = () => {
     // const [user] = useAuthState(auth);
     const menuItems = <>
         <li className=' font-semibold'><Link to="/">Home</Link></li>
-        <li className=' font-semibold'><Link to="/appointment">Tools</Link></li>
+        <li className=' font-semibold'><Link to="/tool">Tools</Link></li>
         <li className=' font-semibold'><Link to="/review">Review</Link></li>
-        <li className=' font-semibold'><Link to="/review">Blog</Link></li>
+        <li className=' font-semibold'><Link to="/blog">Blog</Link></li>
         <li className=' font-semibold'><Link to="/contact">Contact</Link></li>
         <li className=' font-semibold'><Link to="/about">About</Link></li>
         {/* <li className=' font-semibold'>
