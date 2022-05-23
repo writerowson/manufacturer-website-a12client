@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+
 
 const Header = () => {
-    // const [user] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const menuItems = <>
         <li className=' font-semibold'><Link to="/">Home</Link></li>
         <li className=' font-semibold'><Link to="/tool">Tools</Link></li>
@@ -10,12 +13,12 @@ const Header = () => {
         <li className=' font-semibold'><Link to="/blog">Blog</Link></li>
         <li className=' font-semibold'><Link to="/contact">Contact</Link></li>
         <li className=' font-semibold'><Link to="/about">About</Link></li>
-        {/* <li className=' font-semibold'>
+        <li className=' font-semibold'>
             {user ? <button>SignOut</button>
-                : <Link to="/about">Login</Link>
+                : <Link to="/login">Login</Link>
 
             }
-        </li> */}
+        </li>
 
     </>
     return (

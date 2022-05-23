@@ -1,16 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BSummary from '../Shared/BSummary';
 import Review from '../Shared/Review';
 import Banner from './Banner';
 import Spelicalituies from './Spelicalituies';
-import Tool from './Tools/Tool';
-import useTools from './Tools/useTools';
+import Tool from './ToolRage/Tool';
+import useTools from './ToolRage/useTools';
+import { AiOutlineDoubleRight } from 'react-icons/ai'
+import Services from './Services';
 
 const Home = () => {
     const [Tools, setTools] = useTools()
 
     return (
-        <div>
+        <div className='bg-base-200'>
             <Banner></Banner>
             <div className=' mx-12'>
                 <h1 className='text-4xl text-center text-accent font-semibold mt-20 mb-9 underline underline-offset-4'>Latest Tools and Accessories</h1>
@@ -23,10 +26,12 @@ const Home = () => {
                     }
                 </div>
 
+                <Link className="btn btn-link flex justify-end" to={'/tool'}> See all PC World tool <AiOutlineDoubleRight className='ml-1'></AiOutlineDoubleRight> </Link>
             </div>
             <BSummary></BSummary>
-            <Review></Review>
+            <Services></Services>
             <Spelicalituies></Spelicalituies>
+
         </div>
     );
 };

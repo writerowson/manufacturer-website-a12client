@@ -1,6 +1,6 @@
 import React from 'react';
 import banner from '../../images/banner.jpg'
-
+import { AiOutlineDoubleRight } from 'react-icons/ai'
 const Banner = () => {
     return (
         <div className="bg-no-repeat bg-center hero bg-cy"
@@ -12,7 +12,7 @@ const Banner = () => {
                 <p className='text-sm text-white uppercase '>Accessories <span className='mx-16'>Instruments</span> Appliances </p>
                 <div className=' mt-8 pt-10  '>
                     <button className="btn btn-sm btn-outline btn-secondary animate-bounce w-40 h-6">Explore More</button>
-                    <button className="btn btn-sm btn-outline btn-secondary animate-bounce w-40 h-6"> Shop Now </button>
+                    <button className="btn btn-sm btn-outline btn-secondary animate-bounce w-40 h-6"> Shop Now            <AiOutlineDoubleRight className='ml-1'></AiOutlineDoubleRight> </button>
                 </div>
             </div>
         </div >
