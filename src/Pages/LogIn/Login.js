@@ -1,11 +1,13 @@
 
 import React from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Shared/Loading';
 import SocialLogin from './SocialLogin';
 
 const Login = () => {
+    const navigate = useNavigate()
     const [
         signInWithEmailAndPassword,
         user,
@@ -13,7 +15,16 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth)
 
-
+    if (loading) {
+        return <Loading></Loading>
+    }
+    if (user) {
+        navigate('/')
+    }
+    let signInError;
+    if (error) {
+        signInError = <p ><small>{error?.message}</small></p>
+    }
 
 
     return (
@@ -46,6 +57,7 @@ const Login = () => {
                                     <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+                            {signInError}
                             <div class="form-control mt-6">
                                 <button class="btn btn-accent">Login</button>
                             </div>

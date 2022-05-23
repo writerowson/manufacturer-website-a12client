@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Shared/Loading';
 import SocialLogin from './SocialLogin';
 
 const Register = () => {
@@ -22,14 +23,14 @@ const Register = () => {
         console.log(data.email, data.password);
 
     }
-
+    let signInError;
     if (loading || updating) {
-        return <p>Loading...</p>;
+        return <Loading></Loading>
     }
     if (user) {
         navigate('/')
     }
-    let signInError;
+
     if (error || updateError) {
         signInError = <p ><small>{error?.message || updateError?.message}</small></p>
     }
@@ -65,7 +66,7 @@ const Register = () => {
                                     })}
                                 />
                                 <label className="label">
-                                    {errors.name?.type === 'required' && <span className="label-text-alt ">{errors.name.message}</span>}
+                                    {errors.name?.type === 'required' && <span className="label-text-alt text-red-500 ">{errors.name.message}</span>}
                                 </label>
                             </div>
                             <div class="form-control">
@@ -88,8 +89,8 @@ const Register = () => {
                                     })}
                                 />
                                 <label className="label">
-                                    {errors.email?.type === 'required' && <span className="label-text-alt ">{errors.email.message}</span>}
-                                    {errors.email?.type === 'pattern' && <span className="label-text-alt ">{errors.email.message}</span>}
+                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-500 ">{errors.email.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500 ">{errors.email.message}</span>}
                                 </label>
                             </div>
                             <div class="form-control">
@@ -117,6 +118,7 @@ const Register = () => {
                                     {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                                 </label>
                             </div>
+                            {signInError}
                             <div class="form-control mt-6">
                                 <button class="btn btn-accent">Register</button>
                             </div>
