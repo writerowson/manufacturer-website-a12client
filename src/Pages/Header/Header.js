@@ -2,10 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+
+    };
+
+
     const menuItems = <>
         <li className=' font-semibold'><Link to="/">Home</Link></li>
         <li className=' font-semibold'><Link to="/tool">Tools</Link></li>
@@ -14,7 +21,7 @@ const Header = () => {
         <li className=' font-semibold'><Link to="/contact">Contact</Link></li>
         <li className=' font-semibold'><Link to="/about">About</Link></li>
         <li className=' font-semibold'>
-            {user ? <button>SignOut</button>
+            {user ? <button onClick={logout}>SignOut</button>
                 : <Link to="/login">Login</Link>
 
             }

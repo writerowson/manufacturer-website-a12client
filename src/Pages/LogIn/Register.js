@@ -23,6 +23,16 @@ const Register = () => {
 
     }
 
+    if (loading || updating) {
+        return <p>Loading...</p>;
+    }
+    if (user) {
+        navigate('/')
+    }
+    let signInError;
+    if (error || updateError) {
+        signInError = <p ><small>{error?.message || updateError?.message}</small></p>
+    }
 
     return (
         <div class="hero min-h-screen  text-accent">
@@ -54,6 +64,9 @@ const Register = () => {
                                         }
                                     })}
                                 />
+                                <label className="label">
+                                    {errors.name?.type === 'required' && <span className="label-text-alt ">{errors.name.message}</span>}
+                                </label>
                             </div>
                             <div class="form-control">
                                 <label class="label">
@@ -74,6 +87,10 @@ const Register = () => {
                                         }
                                     })}
                                 />
+                                <label className="label">
+                                    {errors.email?.type === 'required' && <span className="label-text-alt ">{errors.email.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt ">{errors.email.message}</span>}
+                                </label>
                             </div>
                             <div class="form-control">
                                 <label class="label">
@@ -96,6 +113,8 @@ const Register = () => {
                                 />
                                 <label class="label">
                                     <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                    {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+                                    {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                                 </label>
                             </div>
                             <div class="form-control mt-6">
