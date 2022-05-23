@@ -3,7 +3,7 @@ import React from 'react';
 const Review = () => {
     return (
         <div>
-            <h1 className='text-4xl text-center font-semibold text-primary mt-20 mb-9 underline underline-offset-4'>Customers Opinions</h1>
+            <h1 className='text-4xl text-center font-semibold text-accent mt-20 mb-9 underline underline-offset-4'>Customers Opinions</h1>
             <div className="carousel w-full">
                 <div id="item1" className="carousel-item w-full">
                     <img src="" className="w-full" />

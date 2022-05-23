@@ -16,7 +16,7 @@ const Tool = ({ tool }) => {
                 <p><b>Quantity: </b>{quantity} pieces</p>
                 <p><b>Price: </b>{price}</p>
                 <div className="card-actions">
-                    <button className="btn btn-secondary btn-sm animate-bounce w-40 h-6 hover:btn-primary">Order Now</button>
+                    <button className="btn btn-accent btn-sm animate-bounce w-40 h-6 hover:btn-primary">Order Now</button>
                 </div>
             </div >
 

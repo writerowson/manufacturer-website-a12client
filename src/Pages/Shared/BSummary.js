@@ -9,8 +9,8 @@ import { RiExchangeDollarFill } from "react-icons/ri"
 const BSummary = () => {
     return (
         <div >
-            <h1 className='text-4xl text-center font-semibold text-primary mt-20 mb-9 underline underline-offset-4 '>Business Summary</h1>
-            <div class=" mx-12 stats shadow grid lg:grid-cols-4 sm:grid-cols-1 bg-gray-900 ">
+            <h1 className='text-4xl text-center font-semibold text-accent mt-20 mb-9 underline underline-offset-4 '>Business Summary</h1>
+            <div class=" mx-12 stats shadow grid lg:grid-cols-4 sm:grid-cols-1 bg-accent ">
                 <div class="stat bg-secondary">
                     <div class="stat-figure ">
                         <DiHtml5DeviceAccess className=' w-8 h-8'></DiHtml5DeviceAccess>
