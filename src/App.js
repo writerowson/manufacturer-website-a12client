@@ -6,6 +6,7 @@ import Header from './Pages/Header/Header';
 import Home from './Pages/HomePages/Home';
 import Tools from './Pages/HomePages/ToolRage/Tools';
 import Login from './Pages/LogIn/Login';
+import Register from './Pages/LogIn/Register';
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/tool' element={<Tools></Tools>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

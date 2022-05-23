@@ -5,7 +5,7 @@ import { BsYoutube } from 'react-icons/bs'
 
 const Footer = () => {
     return (
-        <div className=' bg-secondary'>
+        <div className=' bg-secondary text-center'>
             <footer className="footer p-10  text-accent text-center ">
                 <div className=''>
                     <span className="footer-title">Services</span>

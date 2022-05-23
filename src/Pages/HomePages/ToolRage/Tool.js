@@ -8,18 +8,12 @@ const Tool = ({ tool }) => {
 
         <div className="card w-96 bg-base-100 shadow-xl my-8">
             <figure className="px-10 pt-10">
-                <img src={img} alt="Shoes" className="rounded-xl" />
+                <img src={img} alt="tool" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title text-2xl">{name}</h2>
-                <p>{review}
-                    <div class="rating">
-                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                    </div></p>
+                <p>{review}</p>
+
                 <p className='text-left text-sm'>{description}</p>
                 <p><b>Brand: </b>{brand}</p>
                 <p><b>Quantity: </b>{quantity} pieces</p>
