@@ -21,7 +21,7 @@ const Header = () => {
         <li className=' font-semibold'><Link to="/contact">Contact</Link></li>
         <li className=' font-semibold'><Link to="/about">About</Link></li>
         <li className=' font-semibold'>
-            {user ? <button onClick={logout}>SignOut</button>
+            {user ? <button className='btn btn-accent text-white' onClick={logout}>SignOut</button>
                 : <Link to="/login">Login</Link>
 
             }

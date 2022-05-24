@@ -1,12 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SiFacebook } from "react-icons/si"
 import { FcGoogle } from "react-icons/fc"
 import { AiFillGithub } from "react-icons/ai"
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Loading from '../Shared/Loading';
 
 const SocialLogin = () => {
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+    const navigate = useNavigate()
+    let signInError;
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    }, [user, from, navigate])
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+    if (error) {
+        signInError = <p className='text-red-500'><small>{error?.message}</small></p>
+    }
     return (
         <div>
-            <button className='mx-2 ' > <FcGoogle></FcGoogle> </button>
+
+            {signInError}
+            <button onClick={() => signInWithGoogle()} className='mx-2 ' > <FcGoogle></FcGoogle> </button>
             <button className='mx-2 '><SiFacebook className='text-primary'></SiFacebook> </button>
             <button className='mx-2 '><AiFillGithub></AiFillGithub> </button>
         </div>
