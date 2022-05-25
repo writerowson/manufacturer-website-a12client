@@ -1,6 +1,5 @@
 [
     {
-        "_id": "628a1ea87e38b57b92f5bd3d",
         "price": "$699",
         "img": "https://images.pexels.com/photos/6942359/pexels-photo-6942359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "name": "AIO  Monitor",
@@ -17,7 +16,6 @@
         "review": "5"
     },
     {
-        "_id": "628a1ea89f4627655aba7317",
         "price": "$98.15",
         "img": "https://images.pexels.com/photos/1432675/pexels-photo-1432675.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
         "name": "Strix MotherBoard",
@@ -34,7 +32,6 @@
         "review": "4.5"
     },
     {
-        "_id": "628a1ea85d2a7e36724c5515",
         "price": "$45.28",
         "img": "https://images.pexels.com/photos/2225617/pexels-photo-2225617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "name": "Primo Cooling fan",
@@ -51,7 +48,6 @@
         "review": "4"
     },
     {
-        "_id": "628a1ea880e6de15745166b9",
         "price": "$88.18",
         "img": "https://images.pexels.com/photos/6913135/pexels-photo-6913135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "name": "MEK Casing",
@@ -68,7 +64,6 @@
         "review": "5"
     },
     {
-        "_id": "628a1ea815c33ba07a476eb0",
         "price": "$45.87",
         "img": "https://images.pexels.com/photos/2582938/pexels-photo-2582938.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "name": "Ruiz KeyBoard",
@@ -85,7 +80,6 @@
         "review": "5"
     },
     {
-        "_id": "628a1ea8bcb956318d38ccef",
         "price": "$151.23",
         "img": "https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
         "name": "Apex HardDrive",

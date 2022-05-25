@@ -34,7 +34,7 @@ const Spelicalituies = () => {
                         <h2 className="card-title"> <MdGroups className='w-16 h-16 border-2 rounded-full p-1'></MdGroups>
                         </h2>
                         <Link to={'/about'}>About us</Link>
-                        <p>Here is the a dedicated team at your service</p>
+                        <p>Here is  a dedicated team at your service</p>
 
                     </div>
                 </div>

@@ -32,7 +32,7 @@ const Register = () => {
     }
 
     if (error || updateError) {
-        signInError = <p ><small>{error?.message || updateError?.message}</small></p>
+        signInError = <p className='text-red-500'><small>{error?.message || updateError?.message}</small></p>
     }
 
     return (

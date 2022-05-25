@@ -29,7 +29,7 @@ const Login = () => {
         return <Loading></Loading>
     }
     if (error) {
-        signInError = <p ><small>{error?.message}</small></p>
+        signInError = <p className='text-red-500'><small>{error?.message}</small></p>
     }
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
