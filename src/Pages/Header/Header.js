@@ -17,11 +17,15 @@ const Header = () => {
         <li className=' font-semibold'><Link to="/">Home</Link></li>
         <li className=' font-semibold'><Link to="/tools">Tools</Link></li>
         <li className=' font-semibold'><Link to="/review">Review</Link></li>
+        {user && <li className=' font-semibold'><Link to="/dashboard">DashBoard</Link></li>}
+        {user && <li className=' font-semibold'><Link to="/myorders">My Orders</Link></li>}
+        {user && <li className=' font-semibold'><Link to="/addareview">Add a Review</Link></li>}
+        {user && <li className=' font-semibold'><Link to="/myprofile">My Profile</Link></li>}
         <li className=' font-semibold'><Link to="/blog">Blog</Link></li>
         <li className=' font-semibold'><Link to="/contact">Contact</Link></li>
-        <li className=' font-semibold'><Link to="/about">About</Link></li>
+
         <li className=' font-semibold'>
-            {user ? <button className='btn btn-accent text-white' onClick={logout}>SignOut</button>
+            {user ? <button className='btn btn-accent text-white' onClick={logout}>Sign Out</button>
                 : <Link to="/login">Login</Link>
 
             }
@@ -45,7 +49,7 @@ const Header = () => {
                 </div>
                 <a className="btn btn-ghost  normal-case text-2xl font-semibold ">PC World</a>
             </div>
-            <div className="navbar-end hidden lg:flex">
+            <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
                 </ul>

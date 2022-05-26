@@ -8,6 +8,7 @@ import Tools from './Pages/HomePages/ToolRage/Tools';
 import ToolsDetail from './Pages/HomePages/ToolRage/ToolsDetail';
 import Login from './Pages/LogIn/Login';
 import Register from './Pages/LogIn/Register';
+import MyProfile from './Pages/MyProfile/MyProfile';
 import NotFounded from './Pages/Shared/NotFounded';
 import RequireAuth from './Pages/Shared/RequireAuth';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/tools/:toolId' element={<RequireAuth><ToolsDetail></ToolsDetail></RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/myprofile' element={<MyProfile></MyProfile>}></Route>
         <Route path='*' element={<NotFounded></NotFounded>} > </Route>
       </Routes>
       <Footer></Footer>
