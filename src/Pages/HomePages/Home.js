@@ -26,7 +26,7 @@ const Home = () => {
                     }
                 </div>
 
-                <Link className="btn btn-link text-accent flex justify-end" to={'/tool'}> See all PC World tool <AiOutlineDoubleRight className='ml-1'></AiOutlineDoubleRight> </Link>
+                <Link className="btn btn-link text-accent flex justify-end" to={'/tools'}> See all PC World tools <AiOutlineDoubleRight className='ml-1'></AiOutlineDoubleRight> </Link>
             </div>
             <BSummary></BSummary>
             <Services></Services>

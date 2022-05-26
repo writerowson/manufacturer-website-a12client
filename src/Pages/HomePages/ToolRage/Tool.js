@@ -18,8 +18,6 @@ const Tool = ({ tool }) => {
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title text-2xl">{name}</h2>
-                <p>{review}</p>
-
                 <p className='text-left text-sm'>{description}</p>
                 <p><b>Brand: </b>{brand}</p>
                 <p><b>Quantity: </b>{quantity} pieces</p>
