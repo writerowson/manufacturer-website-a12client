@@ -36,23 +36,23 @@ const Register = () => {
     }
 
     return (
-        <div class="hero min-h-screen  text-accent">
-            <div class="text-center  bg-base-100 p-32 rounded">
-                <h1 class="text-5xl font-bold mb-10">Register now!</h1>
+        <div className="hero min-h-screen  text-accent">
+            <div className="text-center  bg-base-100 p-32 rounded">
+                <h1 className="text-5xl font-bold mb-10">Register now!</h1>
                 <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-12'>
-                    <div class=" w-full max-w-lg  bg-base-100 mt-50">
-                        <div class="">
+                    <div className=" w-full max-w-lg  bg-base-100 mt-50">
+                        <div className="">
                             <p className='lg:mt-40 mb-2'>Register with</p>
                             <SocialLogin></SocialLogin>
 
                         </div>
                     </div>
-                    <div class="divider lg:divider-horizontal lg:hidden">OR</div>
-                    <div class="card  flex-shrink-0 w-full max-w-sm shadow-xl bg-base-100">
-                        <form onSubmit={handleSubmit(onSubmit)} class="card-body ">
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text" name="Name">Name</span>
+                    <div className="divider lg:divider-horizontal lg:hidden">OR</div>
+                    <div className="card  flex-shrink-0 w-full max-w-sm shadow-xl bg-base-100">
+                        <form onSubmit={handleSubmit(onSubmit)} className="card-body ">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text" name="Name">Name</span>
                                 </label>
                                 <input
                                     type="text"
@@ -69,9 +69,9 @@ const Register = () => {
                                     {errors.name?.type === 'required' && <span className="label-text-alt text-red-500 ">{errors.name.message}</span>}
                                 </label>
                             </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text" name="email">Email</span>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text" name="email">Email</span>
                                 </label>
                                 <input
                                     type="email"
@@ -93,9 +93,9 @@ const Register = () => {
                                     {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500 ">{errors.email.message}</span>}
                                 </label>
                             </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text" name="password">Password</span>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text" name="password">Password</span>
                                 </label>
                                 <input
                                     type="password"
@@ -112,15 +112,15 @@ const Register = () => {
                                         }
                                     })}
                                 />
-                                <label class="label">
-                                    <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                <label className="label">
+                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                                     {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                                 </label>
                             </div>
                             {signInError}
-                            <div class="form-control mt-6">
-                                <button class="btn btn-accent">Register</button>
+                            <div className="form-control mt-6">
+                                <button className="btn btn-accent">Register</button>
                             </div>
                         </form>
                     </div>

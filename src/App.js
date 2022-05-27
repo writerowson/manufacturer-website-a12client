@@ -1,6 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Blog from './Pages/Blog/Blog';
 import Footer from './Pages/Footer/Footer';
 import Header from './Pages/Header/Header';
 import Home from './Pages/HomePages/Home';
@@ -9,8 +10,12 @@ import ToolsDetail from './Pages/HomePages/ToolRage/ToolsDetail';
 import Login from './Pages/LogIn/Login';
 import Register from './Pages/LogIn/Register';
 import MyProfile from './Pages/MyProfile/MyProfile';
+import Review from './Pages/Review/Review';
 import NotFounded from './Pages/Shared/NotFounded';
 import RequireAuth from './Pages/Shared/RequireAuth';
+import AddAReview from './Pages/UserPage/AddAReview';
+import DashBoard from './Pages/UserPage/DashBoard';
+import MyOrders from './Pages/UserPage/MyOrders';
 
 
 
@@ -23,7 +28,13 @@ function App() {
         <Route path='/tools' element={<Tools></Tools>}></Route>
         <Route path='/tools/:toolId' element={<RequireAuth><ToolsDetail></ToolsDetail></RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/review' element={<Review></Review>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/myorders' element={<MyOrders></MyOrders>}></Route>
+        <Route path='/addareview' element={<AddAReview></AddAReview>}></Route>
+
         <Route path='/myprofile' element={<MyProfile></MyProfile>}></Route>
         <Route path='*' element={<NotFounded></NotFounded>} > </Route>
       </Routes>

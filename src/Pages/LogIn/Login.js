@@ -36,23 +36,23 @@ const Login = () => {
     }
 
     return (
-        <div class="hero min-h-screen  text-accent">
-            <div class="text-center  bg-base-100 p-32 rounded">
-                <h1 class="text-5xl font-bold mb-10">Login now!</h1>
+        <div className="hero min-h-screen  text-accent">
+            <div className="text-center  bg-base-100 p-32 rounded">
+                <h1 className="text-5xl font-bold mb-10">Login now!</h1>
                 <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-12'>
-                    <div class=" w-full max-w-lg  bg-base-100 mt-50">
-                        <div class="">
+                    <div className=" w-full max-w-lg  bg-base-100 mt-50">
+                        <div className="">
                             <p className='lg:mt-40 mb-2'>Login with</p>
                             <SocialLogin></SocialLogin>
 
                         </div>
                     </div>
-                    <div class="divider lg:divider-horizontal lg:hidden">OR</div>
-                    <div class="card flex-shrink-0 w-full max-w-sm shadow-xl bg-base-100">
-                        <form onSubmit={handleSubmit(onSubmit)} class="card-body">
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text" name="email">Email</span>
+                    <div className="divider lg:divider-horizontal lg:hidden">OR</div>
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-xl bg-base-100">
+                        <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text" name="email">Email</span>
                                 </label>
                                 <input
                                     type="email"
@@ -74,9 +74,9 @@ const Login = () => {
                                     {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
                                 </label>
                             </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text" name="password">Password</span>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text" name="password">Password</span>
                                 </label>
                                 <input
                                     type="password"
@@ -93,15 +93,15 @@ const Login = () => {
                                         }
                                     })}
                                 />
-                                <label class="label">
-                                    <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                <label className="label">
+                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                                     {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                                 </label>
                             </div>
                             {signInError}
-                            <div class="form-control mt-6">
-                                <button class="btn btn-accent">Login</button>
+                            <div className="form-control mt-6">
+                                <button className="btn btn-accent">Login</button>
                             </div>
                         </form>
                     </div>

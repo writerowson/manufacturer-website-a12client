@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-const Review = () => {
+const DashBoard = () => {
     return (
         <div>
 
@@ -9,4 +8,4 @@ const Review = () => {
     );
 };
 
-export default Review;
+export default DashBoard;

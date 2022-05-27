@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BSummary from '../Shared/BSummary';
-import Review from '../Shared/Review';
+
 import Banner from './Banner';
 import Spelicalituies from './Spelicalituies';
 import Tool from './ToolRage/Tool';

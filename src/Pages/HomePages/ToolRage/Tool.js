@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Tool = ({ tool }) => {
 
-    const { _id, img, name, price, description, brand, quantity, other, review } = tool
+    const { _id, img, name, price, description, brand, quantity, tools } = tool
 
     const navigate = useNavigate()
     const showToolDetails = id => {
@@ -20,7 +20,7 @@ const Tool = ({ tool }) => {
                 <h2 className="card-title text-2xl">{name}</h2>
                 <p className='text-left text-sm'>{description}</p>
                 <p><b>Brand: </b>{brand}</p>
-                <p><b>Quantity: </b>{quantity} pieces</p>
+                <p><b> Quantity: </b>{tools} pieces</p>
                 <p><b>Price: </b>{price}</p>
                 <div className="card-actions">
                     <button onClick={() => showToolDetails(_id)} className="btn btn-accent btn-sm animate-bounce w-40 h-6 hover:btn-primary">Order Now</button>
