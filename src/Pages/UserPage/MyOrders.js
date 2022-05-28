@@ -2,7 +2,7 @@ import React from 'react';
 
 const MyOrders = () => {
     return (
-        <div>
+        <div className='text-white mt-8'>
             <h1>Total Orders</h1>
         </div>
     );

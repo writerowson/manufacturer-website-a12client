@@ -126,7 +126,7 @@ const Register = () => {
                     </div>
 
                 </div>
-                <p className=' mt-16 '>Already Register? <Link onClick='' to='/register' className='font-bold' >Login Now!!</Link></p>
+                <p className=' mt-16 '>Already Register? <Link onClick='' to='/login' className='font-bold' >Login Now!!</Link></p>
             </div>
 
 

@@ -1,5 +1,6 @@
 
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Blog from './Pages/Blog/Blog';
 import Footer from './Pages/Footer/Footer';
@@ -16,7 +17,7 @@ import RequireAuth from './Pages/Shared/RequireAuth';
 import AddAReview from './Pages/UserPage/AddAReview';
 import DashBoard from './Pages/UserPage/DashBoard';
 import MyOrders from './Pages/UserPage/MyOrders';
-
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -28,18 +29,23 @@ function App() {
         <Route path='/tools' element={<Tools></Tools>}></Route>
         <Route path='/tools/:toolId' element={<RequireAuth><ToolsDetail></ToolsDetail></RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/dashboard' element={<DashBoard></DashBoard>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/review' element={<Review></Review>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/myorders' element={<MyOrders></MyOrders>}></Route>
-        <Route path='/addareview' element={<AddAReview></AddAReview>}></Route>
 
-        <Route path='/myprofile' element={<MyProfile></MyProfile>}></Route>
+        {/* nested route */}
+        <Route path='dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}>
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='addareview' element={<AddAReview></AddAReview>}>Add a review</Route>
+          <Route path='myprofile' element={<MyProfile></MyProfile>}>My profile</Route>
+        </Route>
+
+
         <Route path='*' element={<NotFounded></NotFounded>} > </Route>
       </Routes>
       <Footer></Footer>
-    </div>
+      <ToastContainer></ToastContainer>
+    </div >
   );
 }
 

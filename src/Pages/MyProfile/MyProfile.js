@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+
 
 const MyProfile = () => {
 
     return (
         <div className=' bg-accent'>
-            <div className='mx-28 py-12 text-white bg-accent'>
-                <h3 className='text-6xl font-semibold text-white Plus'>I'm    <span className='text-secondary ml-10 '>  Rowshon Ara</span></h3>
+            <div className=' mt-12 text-white bg-accent'>
+                <h3 className='text-4xl font-semibold text-white Plus'>I'm    <span className='text-secondary ml-10 '>  Rowshon Ara</span></h3>
 
-                <p className='mt-8'><b className='text-secondary'>Email Address: </b>runurowson@gmail.com</p>
+                <p ><b className='text-secondary'>Email Address: </b>runurowson@gmail.com</p>
                 <p ><b className='text-secondary'>Educational background:</b> MBA from National University</p>
                 <p><b className='text-secondary '>Technologies and Skills :</b>
                     <li>Browser format- chrome, firefox, microsoft edge </li>
