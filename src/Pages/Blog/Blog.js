@@ -39,6 +39,14 @@ const Blog = () => {
                 <li>Array.filter - Tnis method return a new array and there willbe all name which matches the condition of funtion. If not it will return an empty array.</li>
             </div>
 
+            <h1 className='text-2xl text-secondary'> <span className='text-white'>6.</span>Defination of unit test and reason to use it.</h1>
+            <p>Unit test is a software which tests individual units or software to ensure the quality standard of codes.Here's some reasons to use unit test </p>
+            <div className='text-sm pl-16 pb-20'>
+                <li>Unit test is a from of documentatiomn. it express how software works. </li>
+                <li>Unit test  increases code readability</li>
+                <li>Unit test  reduces Cyclomatic Complexity </li>
+                <li>Unit test  improves deployment velocity.</li>
+            </div>
         </div>
     );
 };

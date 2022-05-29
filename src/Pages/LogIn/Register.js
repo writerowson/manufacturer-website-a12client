@@ -1,13 +1,16 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
+import useToken from '../Shared/useToken';
 import SocialLogin from './SocialLogin';
 
 const Register = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     const [
         createUserWithEmailAndPassword,
@@ -17,6 +20,7 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const { register, formState: { errors }, handleSubmit } = useForm()
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [token] = useToken(user)
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
@@ -27,8 +31,8 @@ const Register = () => {
     if (loading || updating) {
         return <Loading></Loading>
     }
-    if (user) {
-        navigate('/')
+    if (token) {
+        navigate(from, { replace: true });
     }
 
     if (error || updateError) {

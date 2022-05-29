@@ -11,3 +11,4 @@
 * react-from
 * firebase
 * toastify
+* firebase

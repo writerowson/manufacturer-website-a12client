@@ -5,7 +5,9 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
+import useToken from '../Shared/useToken';
 import SocialLogin from './SocialLogin';
+
 
 const Login = () => {
     const navigate = useNavigate()
@@ -19,6 +21,7 @@ const Login = () => {
     let signInError;
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
+    const [token] = useToken(user);
 
     useEffect(() => {
         if (user) {
