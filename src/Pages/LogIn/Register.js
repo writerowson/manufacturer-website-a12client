@@ -8,9 +8,6 @@ import useToken from '../Shared/useToken';
 import SocialLogin from './SocialLogin';
 
 const Register = () => {
-    const navigate = useNavigate();
-    const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
 
     const [
         createUserWithEmailAndPassword,
@@ -20,19 +17,27 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const { register, formState: { errors }, handleSubmit } = useForm()
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-    const [token] = useToken(user)
+
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
         console.log(data.email, data.password);
 
     }
+    const [token] = useToken(user);
+
+    const navigate = useNavigate()
     let signInError;
-    if (loading || updating) {
-        return <Loading></Loading>
-    }
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+
     if (token) {
         navigate(from, { replace: true });
+    }
+
+    if (loading || updating) {
+        return <Loading></Loading>
     }
 
     if (error || updateError) {

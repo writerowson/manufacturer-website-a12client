@@ -15,8 +15,6 @@ const SocialLogin = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-
-
     useEffect(() => {
         if (user) {
             navigate(from, { replace: true });

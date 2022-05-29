@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
@@ -10,24 +9,28 @@ import SocialLogin from './SocialLogin';
 
 
 const Login = () => {
-    const navigate = useNavigate()
-    const { register, formState: { errors }, handleSubmit } = useForm();
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth)
+    const { register, formState: { errors }, handleSubmit } = useForm();
+
+
+    const [token] = useToken(user);
+
+    const navigate = useNavigate()
     let signInError;
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
-    const [token] = useToken(user);
 
     useEffect(() => {
-        if (user) {
+        if (token) {
             navigate(from, { replace: true });
         }
-    }, [user, from, navigate])
+    }, [token, from, navigate])
+
     if (loading) {
         return <Loading></Loading>
     }
@@ -67,11 +70,12 @@ const Login = () => {
                                             message: 'Email is Required'
                                         },
                                         pattern: {
-                                            value: /[a-z0-9]+@[a-z]+\.[a-z]{2, 3}/,
+                                            value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
                                             message: 'Provide a valid Email'
                                         }
                                     })}
                                 />
+
                                 <label className="label">
                                     {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
                                     {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
