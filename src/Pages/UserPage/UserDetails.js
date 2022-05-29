@@ -8,7 +8,7 @@ const UserDetails = ({ tool }) => {
     const [user] = useAuthState(auth)
 
 
-    const handleBooking = (e) => {
+    const handleOrder = (e) => {
         e.preventDefault()
         const order = { name, price, quantity, userName: user?.displayName, userEmail: user?.email }
         console.log(order);
@@ -35,7 +35,7 @@ const UserDetails = ({ tool }) => {
         <div className='text-xs '>
 
             <h1 className='text-2xl font-bold text-accent'>Order Form </h1>
-            <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 justify-items-center   '>
+            <form onSubmit={handleOrder} className='grid grid-cols-1 gap-3 justify-items-center   '>
 
                 <div className=' w-full max-w-xs'>
                     <label className="label">
@@ -77,7 +77,7 @@ const UserDetails = ({ tool }) => {
                         className="input input-bordered input-sm w-full" />
                 </div>
 
-                <input for="my-modal-6" type="submit" value="Ordered" className="btn btn-accent btn-sm w-full max-w-xs" />
+                <input htmlFor="my-modal-6" type="submit" value="Ordered" className="btn btn-accent btn-sm w-full max-w-xs" />
 
             </form>
 

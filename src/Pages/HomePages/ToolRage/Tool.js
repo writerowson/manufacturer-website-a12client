@@ -23,7 +23,7 @@ const Tool = ({ tool }) => {
                 <p><b> Quantity: </b>{tools} pieces</p>
                 <p><b>Price: </b>{price}</p>
                 <div className="card-actions">
-                    <button onClick={() => showToolDetails(_id)} className="btn btn-accent btn-sm  hover:btn-secondary">Order</button>
+                    <button onClick={() => showToolDetails(_id)} defaultValue="" className="btn btn-accent btn-sm  hover:btn-secondary">Order</button>
                 </div>
             </div >
 
