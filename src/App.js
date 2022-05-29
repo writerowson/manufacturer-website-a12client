@@ -18,6 +18,7 @@ import AddAReview from './Pages/UserPage/AddAReview';
 import DashBoard from './Pages/UserPage/DashBoard';
 import MyOrders from './Pages/UserPage/MyOrders';
 import 'react-toastify/dist/ReactToastify.css';
+import Contact from './Pages/Blog/Contact';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/review' element={<Review></Review>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
 
         {/* nested route */}
         <Route path='dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}>

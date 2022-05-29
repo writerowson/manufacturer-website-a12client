@@ -7,7 +7,7 @@ const DashBoard = () => {
             <input id="dashboard-slide-bar" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content ml-10">
                 {/* <!-- Page content here --> */}
-                <h3 className='text-5xl font-semibold text-secondary mt-10 '>  Dashboard</h3>
+                <h3 className='text-5xl font-semibold text-secondary mt-10 underline underline-offset-4'>  Dashboard</h3>
 
                 <Outlet></Outlet>
             </div>
