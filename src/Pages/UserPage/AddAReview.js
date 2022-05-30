@@ -7,6 +7,8 @@ const AddAReview = () => {
 
     const addReview = (e) => {
         e.preventDefault()
+        const review = { userName: user?.displayName }
+        console.log(review);
     }
     return (
         <div className='text-xs bg-secondary w-full rounded mt-10 px-8'>
@@ -15,7 +17,7 @@ const AddAReview = () => {
 
                 <div className=' w-full max-w-xs'>
                     <label className="label">
-                        <span className="label-text " name="email">User Name</span>
+                        <span className="label-text " name="Name">Name</span>
                     </label>
                     <option type="text" name="name" value={user?.displayName || ''}
                         className="input input-bordered input-sm w-full" />
@@ -23,7 +25,7 @@ const AddAReview = () => {
 
                 <div className=' w-full max-w-xs'>
                     <label className="label">
-                        <span className="label-text " name="email">Your Feedback</span>
+                        <span className="label-text " name="text">Your Feedback</span>
                     </label>
                     <textarea className="textarea textarea-bordered input-sm w-full" placeholder="Abc"></textarea>
 
@@ -31,7 +33,7 @@ const AddAReview = () => {
 
                 <div className=' w-full max-w-xs'>
                     <label className="label">
-                        <span className="label-text " name="email">Photo</span>
+                        <span className="label-text " name="photo">Photo</span>
                     </label>
 
                     <select className="input-group select select-bordered input-sm w-full">
