@@ -37,6 +37,7 @@ const UserDetails = ({ tool }) => {
                 <h1 className='text-2xl font-bold text-accent'>Order Form </h1>
                 <div className=' w-full max-w-xs'>
                     <label className="label">
+                        {/* here name is email to display info according email */}
                         <span className="label-text " name="email">Product Name</span>
                     </label>
                     <input type="text" name="productName" value={name || ""}

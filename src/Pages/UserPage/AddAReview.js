@@ -17,10 +17,10 @@ const AddAReview = () => {
 
                 <div className=' w-full max-w-xs'>
                     <label className="label">
-                        <span className="label-text " name="Name">Name</span>
+                        <span className="label-text " name="email">User Name</span>
                     </label>
-                    <option type="text" name="name" value={user?.displayName || ''}
-                        className="input input-bordered input-sm w-full" />
+                    <input type="text" name="productName" value={user?.displayName || ''}
+                        className="input input-bordered w-full" />
                 </div>
 
                 <div className=' w-full max-w-xs'>
@@ -42,17 +42,12 @@ const AddAReview = () => {
                     </select>
 
                 </div>
-
                 <div className=' w-full max-w-xs'>
                     <label className="label">
-                        <span className="label-text " name="email"> Rating</span>
+                        <span className="label-text " name="email">Rating</span>
                     </label>
-                    <option
-                        type="number"
-                        name="productName"
-                        defaultValue=""
-                        className="input input-bordered input-sm w-full"
-                    />
+                    <input type="number" name="productName" defaultValue="5"
+                        className="input input-bordered w-full" />
                 </div>
                 <button className="btn btn-accent btn-sm w-full max-w-xs mb-5">Submit</button>
 
