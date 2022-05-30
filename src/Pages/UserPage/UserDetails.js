@@ -41,28 +41,28 @@ const UserDetails = ({ tool }) => {
                     <label className="label">
                         <span className="label-text " name="email">Product Name</span>
                     </label>
-                    <input type="text" name="productName" value={name || ""}
+                    <option type="text" name="productName" value={name || ""}
                         className="input input-bordered input-sm w-full" />
                 </div>
                 <div className=' w-full max-w-xs'>
                     <label className="label">
                         <span className="label-text " name="email">User Name</span>
                     </label>
-                    <input type="text" name="productName" value={user?.displayName || ''}
+                    <option type="text" name="productName" value={user?.displayName || ''}
                         className="input input-bordered input-sm w-full" />
                 </div>
                 <div className=' w-full max-w-xs'>
                     <label className="label">
                         <span className="label-text " name="email">User Email</span>
                     </label>
-                    <input type="text" name="productName" value={user?.email || ''} disabled
+                    <option type="text" name="productName" value={user?.email || ''} disabled
                         className="input input-bordered input-sm w-full" />
                 </div>
                 <div className=' w-full max-w-xs'>
                     <label className="label">
                         <span className="label-text " name="email"> Order Quantity</span>
                     </label>
-                    <input
+                    <option
                         type="number"
                         name="productName"
                         defaultValue={quantity}
@@ -73,11 +73,11 @@ const UserDetails = ({ tool }) => {
                     <label className="label">
                         <span className="label-text " name="email">Total Amount</span>
                     </label>
-                    <input type="text" name="productName" defaultValue={price} placeholder='$'
+                    <option type="text" name="productName" defaultValue={price} placeholder='$'
                         className="input input-bordered input-sm w-full" />
                 </div>
 
-                <input htmlFor="my-modal-6" type="submit" value="Ordered" className="btn btn-accent btn-sm w-full max-w-xs" />
+                <option htmlFor="my-modal-6" type="submit" value="Ordered" className="btn btn-accent btn-sm w-full max-w-xs" />
 
             </form>
 

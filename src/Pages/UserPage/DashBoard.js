@@ -5,7 +5,7 @@ const DashBoard = () => {
     return (
         <div className="drawer drawer-mobile bg-accent ">
             <input id="dashboard-slide-bar" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content ml-10">
+            <div className="drawer-content mx-10">
                 {/* <!-- Page content here --> */}
                 <h3 className='text-5xl font-semibold text-secondary mt-10 underline underline-offset-4'>  Dashboard</h3>
 
