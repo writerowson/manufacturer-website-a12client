@@ -5,11 +5,11 @@ import auth from '../../firebase.init';
 const MyOrders = () => {
     const [orders, setOrders] = useState([])
     const [user] = useAuthState(auth)
-
+    console.log(user.email, user.name);
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/tools?userEmail=${user.email}`)
-                .then(res => res.json)
+            fetch(`https://secure-brook-18668.herokuapp.com/tools?userEmail=${user.email}`)
+                .then(res => res.json())
                 .then(data => setOrders(data))
         }
     }, [user])
@@ -18,7 +18,7 @@ const MyOrders = () => {
     return (
         <div className='text-accent mt-8'>
             <h1 className='text-white'>  Total Orders {orders.length}</h1>
-            {/* <div className="overflow-x-auto mt-10 ">
+            <div className="overflow-x-auto my-10 ">
                 <table className=" bg-secondary table-compact w-full">
                     <thead>
                         <tr>
@@ -43,7 +43,7 @@ const MyOrders = () => {
                         </tr>)}
                     </tbody>
                 </table>
-            </div> */}
+            </div>
         </div>
     );
 };
